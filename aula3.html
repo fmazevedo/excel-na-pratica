@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 3 — Função SE, validação de dados, filtros e formatação condicional | Excel na Prática</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="index.html">Excel na <span>Prática</span></a>
+<nav><a href="index.html">Início</a><a href="#conteudo">Conteúdo</a><a href="#materiais">Materiais</a></nav>
+</div></header>
+<section class="wrap" style="padding-bottom:10px">
+<div class="kicker">Encontro 3 — Classificando informações para tomada de decisão</div>
+<h1>Função SE, validação de dados, filtros e formatação condicional</h1>
+<p class="lead">Crie regras que classificam processos e ajudam a decidir o que acompanhar primeiro.</p>
+
+<section class="video-box" id="video">
+<h2>Vídeo da aula</h2>
+<div class="video-placeholder">
+  Substitua <code style="color:#fff;background:rgba(255,255,255,.16)">VIDEO_ID_AULA3</code> pelo ID do vídeo do YouTube.
+</div>
+<!-- Quando tiver o ID do vídeo, substitua o bloco acima por:
+<iframe width="100%" style="aspect-ratio:16/9;border:0;border-radius:12px"
+src="https://www.youtube.com/embed/VIDEO_ID_AULA3" title="Vídeo Aula 3" allowfullscreen></iframe>
+-->
+</section>
+
+<div class="btns" id="materiais">
+<a class="btn primary" href="pdf/roteiro-aula3.pdf" target="_blank">Abrir roteiro da aula (PDF)</a>
+<a class="btn secondary" href="Base_Dados_Aula3_Excel_ESPM.xlsx">Baixar base de dados</a>
+</div>
+
+<div class="lesson-meta">
+<div class="meta-card"><strong>Área</strong><br>Direito</div>
+<div class="meta-card"><strong>Duração</strong><br>100 minutos</div>
+<div class="meta-card"><strong>Arquivo</strong><br>Base_Dados_Aula3_Excel_ESPM.xlsx</div>
+</div>
+</section>
+
+<main class="wrap" id="conteudo">
+<h2>Como usar esta apostila</h2>
+<p>Crie regras que classifiquem os processos e facilitem a tomada de decisão.</p>
+<div class="step"><h2>Passo 1 — Padronizar o Risco com lista suspensa</h2>
+<p>Selecione E5:E12 e use Dados &gt; Validação de Dados &gt; Lista. Em Fonte, digite <code>Alto;Médio;Baixo</code>.</p></div>
+<div class="step"><h2>Passo 2 — Prioridade pelo valor da causa</h2>
+<p>Em F5 digite <code>=SE(C5&gt;=100000;"Alta";"Normal")</code> e arraste até F12.</p>
+<div class="callout"><strong>Confira:</strong> devem aparecer 3 processos classificados como “Alta”.</div></div>
+<div class="step"><h2>Passo 3 — Status pelo prazo</h2>
+<p>Em G5 use <code>=SE(D5&lt;=10;"Urgente";"No prazo")</code> e arraste até G12.</p>
+<div class="callout"><strong>Confira:</strong> devem aparecer 4 processos “Urgente”.</div></div>
+<div class="step"><h2>Passo 4 — Ordenar e filtrar</h2>
+<p>Ative o filtro, ordene Prazo (dias) do menor para o maior e filtre Status = Urgente.</p></div>
+<div class="step"><h2>Passo 5 — Formatação condicional</h2>
+<p>Destaque “Urgente” na coluna Status e “Alta” na coluna Prioridade.</p></div>
+<h2>Fique atento</h2><p>Textos devem estar entre aspas. Em algumas instalações do Excel, o separador de argumentos pode ser vírgula em vez de ponto e vírgula.</p>
+<h2>Resumo rápido</h2><p>Estrutura: <code>=SE(teste; se_verdadeiro; se_falso)</code>. Operadores de comparação: <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>=</code>, <code>&lt;&gt;</code>.</p>
+<h2>Para estudar em casa</h2><p>Recrie a lista suspensa, as duas colunas com SE, ordene os processos e aplique formatação condicional.</p>
+<div class="callout"><strong>Desafio:</strong> crie uma terceira coluna que marque como “Estratégico” os processos com causa acima de R$ 200.000.</div>
+</main>
+<footer>Excel na Prática • ESPM • Prof. Flavio Azevedo</footer>
+</body></html>

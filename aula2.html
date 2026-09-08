@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 2 — Referências relativas, absolutas e mistas em um orçamento de campanha | Excel na Prática</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="index.html">Excel na <span>Prática</span></a>
+<nav><a href="index.html">Início</a><a href="#conteudo">Conteúdo</a><a href="#materiais">Materiais</a></nav>
+</div></header>
+<section class="wrap" style="padding-bottom:10px">
+<div class="kicker">Encontro 2 — Construindo uma planilha de orçamento</div>
+<h1>Referências relativas, absolutas e mistas em um orçamento de campanha</h1>
+<p class="lead">Monte um modelo de orçamento que recalcula sozinho quando os valores mudam.</p>
+
+<section class="video-box" id="video">
+<h2>Vídeo da aula</h2>
+<div class="video-placeholder">
+  Substitua <code style="color:#fff;background:rgba(255,255,255,.16)">VIDEO_ID_AULA2</code> pelo ID do vídeo do YouTube.
+</div>
+<!-- Quando tiver o ID do vídeo, substitua o bloco acima por:
+<iframe width="100%" style="aspect-ratio:16/9;border:0;border-radius:12px"
+src="https://www.youtube.com/embed/VIDEO_ID_AULA2" title="Vídeo Aula 2" allowfullscreen></iframe>
+-->
+</section>
+
+<div class="btns" id="materiais">
+<a class="btn primary" href="pdf/roteiro-aula2.pdf" target="_blank">Abrir roteiro da aula (PDF)</a>
+<a class="btn secondary" href="Base_Dados_Aula2_Excel_ESPM.xlsx">Baixar base de dados</a>
+</div>
+
+<div class="lesson-meta">
+<div class="meta-card"><strong>Área</strong><br>Publicidade e Propaganda</div>
+<div class="meta-card"><strong>Duração</strong><br>100 minutos</div>
+<div class="meta-card"><strong>Arquivo</strong><br>Base_Dados_Aula2_Excel_ESPM.xlsx</div>
+</div>
+</section>
+
+<main class="wrap" id="conteudo">
+<h2>Como usar esta apostila</h2>
+<p>Construa o orçamento passo a passo e use os resultados de conferência para validar as fórmulas.</p>
+<div class="step"><h2>Passo 1 — Conferir os parâmetros globais</h2>
+<p>B4 = orçamento de R$ 50.000, B5 = imposto de 5% e B6 = comissão de 15%. A ideia é referenciar essas células nas fórmulas.</p></div>
+<div class="step"><h2>Passo 2 — Imposto e comissão: referência absoluta</h2>
+<p>Em C9 use <code>=B9*$B$5</code> e em D9 use <code>=B9*$B$6</code>. Arraste até a linha 15.</p>
+<div class="callout"><strong>Confira:</strong> imposto do 1º item = R$ 400,00; comissão = R$ 1.200,00.</div></div>
+<div class="step"><h2>Passo 3 — Total por item: referência relativa</h2>
+<p>Em E9 digite <code>=B9+C9+D9</code> e arraste até E15.</p>
+<div class="callout"><strong>Confira:</strong> total do 1º item = R$ 9.600,00.</div></div>
+<div class="step"><h2>Passo 4 — Soma, saldo e situação</h2>
+<p>Em E16 use <code>=SOMA(E9:E15)</code> e em B18 use <code>=B4-E16</code>.</p>
+<div class="callout"><strong>Confira:</strong> soma = R$ 53.400,00; saldo = -R$ 3.400,00.</div></div>
+<div class="step"><h2>Passo 5 — Matriz de cenários: referência mista</h2>
+<p>Em B24 digite <code>=$A24*(1+B$23+$B$5)</code> e arraste para a direita e para baixo.</p></div>
+<h2>Fique atento</h2><p>Sem o <code>$</code>, a referência pode se deslocar ao arrastar. A tecla F4 alterna entre os tipos de referência.</p>
+<h2>Resumo rápido</h2>
+<table><tr><th>Tipo</th><th>Exemplo</th><th>Comportamento</th></tr>
+<tr><td>Relativa</td><td>B9</td><td>Muda ao arrastar</td></tr>
+<tr><td>Absoluta</td><td>$B$5</td><td>Fica totalmente travada</td></tr>
+<tr><td>Mista</td><td>$A24 ou B$23</td><td>Trava só coluna ou linha</td></tr></table>
+<h2>Para estudar em casa</h2><p>Reconstrua imposto, comissão, total, soma e saldo usando corretamente o <code>$</code>. Depois ajuste custos até o saldo ficar positivo.</p>
+<div class="callout"><strong>Desafio:</strong> descubra o maior percentual de comissão que ainda mantém a campanha dentro do orçamento.</div>
+</main>
+<footer>Excel na Prática • ESPM • Prof. Flavio Azevedo</footer>
+</body></html>

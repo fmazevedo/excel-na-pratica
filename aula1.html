@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 1 — Sua primeira análise de vendas no Excel | Excel na Prática</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="index.html">Excel na <span>Prática</span></a>
+<nav><a href="index.html">Início</a><a href="#conteudo">Conteúdo</a><a href="#materiais">Materiais</a></nav>
+</div></header>
+<section class="wrap" style="padding-bottom:10px">
+<div class="kicker">Encontro 1 — Organizando e analisando dados básicos</div>
+<h1>Sua primeira análise de vendas no Excel</h1>
+<p class="lead">Organize dados, calcule com fórmulas e interprete indicadores de vendas.</p>
+
+<section class="video-box" id="video">
+<h2>Vídeo da aula</h2>
+<div class="video-placeholder">
+  Substitua <code style="color:#fff;background:rgba(255,255,255,.16)">VIDEO_ID_AULA1</code> pelo ID do vídeo do YouTube.
+</div>
+<!-- Quando tiver o ID do vídeo, substitua o bloco acima por:
+<iframe width="100%" style="aspect-ratio:16/9;border:0;border-radius:12px"
+src="https://www.youtube.com/embed/VIDEO_ID_AULA1" title="Vídeo Aula 1" allowfullscreen></iframe>
+-->
+</section>
+
+<div class="btns" id="materiais">
+<a class="btn primary" href="pdf/roteiro-aula1.pdf" target="_blank">Abrir roteiro da aula (PDF)</a>
+<a class="btn secondary" href="Base_Dados_Aula1_Excel_ESPM.xlsx">Baixar base de dados</a>
+</div>
+
+<div class="lesson-meta">
+<div class="meta-card"><strong>Área</strong><br>Administração</div>
+<div class="meta-card"><strong>Duração</strong><br>100 minutos</div>
+<div class="meta-card"><strong>Arquivo</strong><br>Base_Dados_Aula1_Excel_ESPM.xlsx</div>
+</div>
+</section>
+
+<main class="wrap" id="conteudo">
+<h2>Como usar esta apostila</h2>
+<p>Siga os passos na ordem, digitando as fórmulas exatamente como aparecem. Depois de cada passo, confira o resultado.</p>
+<div class="step"><h2>Passo 1 — Abrir a base e reconhecer a tela</h2>
+<p>Abra o arquivo e fique na aba <strong>Vendas</strong>. Observe que cada célula possui um endereço, formado pela letra da coluna e pelo número da linha. A barra de fórmulas mostra o conteúdo real da célula.</p></div>
+<div class="step"><h2>Passo 2 — Calcular o total de cada venda</h2>
+<p>Em F5 digite <code>=D5*E5</code> e arraste a alça de preenchimento até F26.</p>
+<div class="callout"><strong>Confira:</strong> F5 deve mostrar R$ 418,80.</div></div>
+<div class="step"><h2>Passo 3 — Montar os indicadores</h2>
+<table><tr><th>Indicador</th><th>Fórmula</th></tr>
+<tr><td>Faturamento total</td><td><code>=SOMA(F5:F26)</code></td></tr>
+<tr><td>Número de vendas</td><td><code>=CONT.NÚM(F5:F26)</code></td></tr>
+<tr><td>Ticket médio</td><td><code>=MÉDIA(F5:F26)</code></td></tr>
+<tr><td>Maior venda</td><td><code>=MÁXIMO(F5:F26)</code></td></tr>
+<tr><td>Menor venda</td><td><code>=MÍNIMO(F5:F26)</code></td></tr></table>
+<div class="callout"><strong>Resultados esperados:</strong> faturamento R$ 13.620,20 • 22 vendas • ticket R$ 619,10 • maior R$ 1.329,30 • menor R$ 314,10.</div></div>
+<div class="step"><h2>Passo 4 — Formatar e interpretar</h2>
+<p>Formate os valores em reais como Moeda (R$) e escreva uma frase interpretando o desempenho do mês.</p></div>
+<h2>Fique atento</h2><p>Toda fórmula começa com <code>=</code>. Se um número aparecer alinhado à esquerda, ele pode ter sido interpretado como texto.</p>
+<h2>Resumo rápido</h2><p>Operadores: <code>+</code> <code>-</code> <code>*</code> <code>/</code>. Funções: SOMA, MÉDIA, MÁXIMO, MÍNIMO e CONT.NÚM.</p>
+<h2>Para estudar em casa</h2><p>Recalcule os cinco indicadores, formate os valores como moeda e escreva três frases interpretando o mês de março.</p>
+<div class="callout"><strong>Desafio:</strong> descubra qual categoria — Papelaria, Eletrônicos ou Acessórios — teve o maior faturamento.</div>
+</main>
+<footer>Excel na Prática • ESPM • Prof. Flavio Azevedo</footer>
+</body></html>
