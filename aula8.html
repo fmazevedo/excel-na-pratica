@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 8 — Importar, limpar, consolidar e atualizar com um clique | Excel na Prática</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="index.html">Excel na <span>Prática</span></a>
+<nav><a href="index.html">Início</a><a href="#conteudo">Conteúdo</a><a href="#materiais">Materiais</a></nav>
+</div></header>
+<section class="wrap" style="padding-bottom:10px">
+<div class="kicker">Encontro 8 — Preparando dados reais para análise — Power Query</div>
+<h1>Importar, limpar, consolidar e atualizar com um clique</h1>
+<p class="lead">Transforme arquivos sujos em um relatório limpo que se atualiza sozinho.</p>
+<section class="video-box" id="video">
+<h2>Vídeo da aula</h2>
+<div class="video-placeholder">Substitua <code style="color:#fff;background:rgba(255,255,255,.16)">VIDEO_ID_AULA8</code> pelo ID do vídeo do YouTube.</div>
+<!-- <iframe width="100%" style="aspect-ratio:16/9;border:0;border-radius:12px" src="https://www.youtube.com/embed/VIDEO_ID_AULA8" title="Vídeo Aula 8" allowfullscreen></iframe> -->
+</section>
+<div class="btns" id="materiais">
+<a class="btn primary" href="pdf/roteiro-aula8.pdf" target="_blank">Abrir roteiro da aula (PDF)</a>
+<a class="btn secondary" href="vendas_jan_2026.csv / vendas_fev_2026.csv / metas_regiao.xlsx">Baixar base de dados</a>
+</div>
+<div class="lesson-meta">
+<div class="meta-card"><strong>Área</strong><br>Adm. / Publicidade / Direito / Rel. Internacionais</div>
+<div class="meta-card"><strong>Duração</strong><br>100 minutos</div>
+<div class="meta-card"><strong>Arquivo</strong><br>vendas_jan_2026.csv / vendas_fev_2026.csv / metas_regiao.xlsx</div>
+</div>
+</section>
+<main class="wrap" id="conteudo">
+<h2>Como usar esta apostila</h2>
+<p>Siga os passos na ordem e use os quadros “Confira o resultado” para validar cada etapa. Ao final, revise o resumo e pratique com os exercícios.</p>
+<div class="step"><h2>Passo 1 — Importar o CSV</h2><p>Vá em Dados &gt; De Texto/CSV, abra <strong>vendas_jan_2026.csv</strong>, confira o delimitador e clique em <strong>Transformar Dados</strong>.</p><div class="callout"><strong>Confira:</strong> abre o Editor do Power Query com Consultas, Visualização e Etapas Aplicadas.</div></div>
+<div class="step"><h2>Passo 2 — Remover lixo e organizar</h2><p>Remova linhas superiores e inferiores, use a primeira linha como cabeçalho e remova a coluna Obs.</p><div class="callout"><strong>Confira:</strong> cada ação aparece em Etapas Aplicadas.</div></div>
+<div class="step"><h2>Passo 3 — Dividir e padronizar</h2><p>Divida Produto e Categoria pelo delimitador <code>|</code>. Padronize Região com Aparar, Maiúscula Cada Palavra e Substituir Valores quando necessário.</p></div>
+<div class="step"><h2>Passo 4 — Remover duplicatas</h2><p>Depois de padronizar, use Remover Duplicatas.</p><div class="callout"><strong>Confira:</strong> janeiro fica com <strong>5 linhas</strong>.</div></div>
+<div class="step"><h2>Passo 5 — Anexar e mesclar</h2><p>Limpe fevereiro, anexe jan + fev, importe metas_regiao.xlsx, mescle pela Região e expanda Gerente.</p><div class="callout"><strong>Confira:</strong> consolidado com <strong>10 linhas + Gerente</strong>.</div></div>
+<div class="step"><h2>Passo 6 — Carregar e atualizar</h2><p>Use Fechar e Carregar. Nos próximos meses, substitua os arquivos e clique em Dados &gt; Atualizar Tudo.</p><div class="callout"><strong>Confira:</strong> Total do Valor = <strong>R$ 5.295</strong>.</div></div>
+<h2>Fique atento</h2><p>Use Transformar Dados antes de carregar, confira o delimitador e lembre-se de expandir a coluna depois de Mesclar.</p>
+<h2>Resumo rápido</h2><p>Etapas Aplicadas = receita gravada<br>Anexar = empilha linhas<br>Mesclar = traz colunas por uma chave<br>Dividir / Substituir / Aparar = limpeza de texto<br>Atualizar Tudo = reexecuta o fluxo.</p>
+<h2>Para estudar em casa</h2><p>☐ Refazer o fluxo completo.<br>☐ Conferir 10 linhas, total R$ 5.295 e Gerente preenchido.<br>☐ Criar vendas_mar_2026.csv e testar Atualizar Tudo.</p>
+<div class="callout"><strong>Desafio:</strong> no Power Query, use Agrupar Por para calcular o total de Valor por Região e identificar qual merece mais atenção.</div>
+</main>
+<footer>Excel na Prática • Prof. Flavio Azevedo</footer>
+</body></html>

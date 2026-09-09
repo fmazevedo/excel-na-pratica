@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 7 — SE aninhado, E, OU, NÃO, HOJE, DIAS e DATADIF | Excel na Prática</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="index.html">Excel na <span>Prática</span></a>
+<nav><a href="index.html">Início</a><a href="#conteudo">Conteúdo</a><a href="#materiais">Materiais</a></nav>
+</div></header>
+<section class="wrap" style="padding-bottom:10px">
+<div class="kicker">Encontro 7 — Construindo regras de decisão mais complexas</div>
+<h1>SE aninhado, E, OU, NÃO, HOJE, DIAS e DATADIF</h1>
+<p class="lead">Combine condições e datas para classificar projetos e decidir onde agir.</p>
+<section class="video-box" id="video">
+<h2>Vídeo da aula</h2>
+<div class="video-placeholder">Substitua <code style="color:#fff;background:rgba(255,255,255,.16)">VIDEO_ID_AULA7</code> pelo ID do vídeo do YouTube.</div>
+<!-- <iframe width="100%" style="aspect-ratio:16/9;border:0;border-radius:12px" src="https://www.youtube.com/embed/VIDEO_ID_AULA7" title="Vídeo Aula 7" allowfullscreen></iframe> -->
+</section>
+<div class="btns" id="materiais">
+<a class="btn primary" href="pdf/roteiro-aula7.pdf" target="_blank">Abrir roteiro da aula (PDF)</a>
+<a class="btn secondary" href="Base_Dados_Aula7_Excel_ESPM.xlsx">Baixar base de dados</a>
+</div>
+<div class="lesson-meta">
+<div class="meta-card"><strong>Área</strong><br>Design / Economia Criativa / Negócios</div>
+<div class="meta-card"><strong>Duração</strong><br>100 minutos</div>
+<div class="meta-card"><strong>Arquivo</strong><br>Base_Dados_Aula7_Excel_ESPM.xlsx</div>
+</div>
+</section>
+<main class="wrap" id="conteudo">
+<h2>Como usar esta apostila</h2>
+<p>Siga os passos na ordem e use os quadros “Confira o resultado” para validar cada etapa. Ao final, revise o resumo e pratique com os exercícios.</p>
+<div class="step"><h2>Passo 1 — Calcular duração e prazos</h2><p>Em H6 digite <code>=DATADIF(F6;G6;"d")</code> e em I6 <code>=DIAS(G6;HOJE())</code>. Arraste até a linha 13.</p><div class="callout"><strong>Confira:</strong> 18, 3, -5, 45, 6, -2, 30, 10.</div></div>
+<div class="step"><h2>Passo 2 — Situação do prazo</h2><p>Em J6 use <code>=SE(I6&lt;0;"Atrasado";SE(I6&lt;=$B$3;"Última semana";"No prazo"))</code>.</p><div class="callout"><strong>Confira:</strong> 2 Atrasado, 2 Última semana e 4 No prazo.</div></div>
+<div class="step"><h2>Passo 3 — Alerta de custo</h2><p>Em K6 use <code>=SE(E(E6&gt;D6;NÃO(B6="Concluído"));"Revisar custo";"OK")</code>.</p></div>
+<div class="step"><h2>Passo 4 — Acompanhamento</h2><p>Em L6 use <code>=SE(OU(J6="Atrasado";K6="Revisar custo";C6="Alta");"Acompanhar";"Normal")</code>.</p><div class="callout"><strong>Confira:</strong> 3 projetos “Acompanhar”.</div></div>
+<div class="step"><h2>Passo 5 — Testar a regra</h2><p>Altere um custo ou uma data e observe as colunas J, K e L se atualizarem.</p></div>
+<h2>Fique atento</h2><p>Conte os parênteses no SE aninhado, mantenha textos entre aspas e, se Dias restantes aparecer como data, formate como Número.</p>
+<h2>Resumo rápido</h2><p>SE aninhado = múltiplas saídas<br>E = todas verdadeiras<br>OU = pelo menos uma<br>NÃO = inverte<br><code>=HOJE()</code>, <code>=DIAS()</code>, <code>=DATADIF()</code> trabalham com datas.</p>
+<h2>Para estudar em casa</h2><p>☐ Recriar as colunas H a L.<br>☐ Alterar o prazo de alerta em B3.<br>☐ Criar uma coluna Recomendação com SE aninhado.</p>
+<div class="callout"><strong>Desafio:</strong> use CONT.SE para contar quantos projetos estão em “Acompanhar” e escreva o que a equipe deve priorizar.</div>
+</main>
+<footer>Excel na Prática • Prof. Flavio Azevedo</footer>
+</body></html>

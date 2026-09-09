@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 4 — Funções de texto: ESQUERDA, DIREITA, PROCURAR e CONCAT | Excel na Prática</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="index.html">Excel na <span>Prática</span></a>
+<nav><a href="index.html">Início</a><a href="#conteudo">Conteúdo</a><a href="#materiais">Materiais</a></nav>
+</div></header>
+<section class="wrap" style="padding-bottom:10px">
+<div class="kicker">Encontro 4 — Tratando e padronizando dados cadastrais</div>
+<h1>Funções de texto: ESQUERDA, DIREITA, PROCURAR e CONCAT</h1>
+<p class="lead">Extraia, localize e combine textos para padronizar uma base de eventos.</p>
+<section class="video-box" id="video">
+<h2>Vídeo da aula</h2>
+<div class="video-placeholder">Substitua <code style="color:#fff;background:rgba(255,255,255,.16)">VIDEO_ID_AULA4</code> pelo ID do vídeo do YouTube.</div>
+<!-- <iframe width="100%" style="aspect-ratio:16/9;border:0;border-radius:12px" src="https://www.youtube.com/embed/VIDEO_ID_AULA4" title="Vídeo Aula 4" allowfullscreen></iframe> -->
+</section>
+<div class="btns" id="materiais">
+<a class="btn primary" href="pdf/roteiro-aula4.pdf" target="_blank">Abrir roteiro da aula (PDF)</a>
+<a class="btn secondary" href="Base_Dados_Aula4_Excel.xlsx">Baixar base de dados</a>
+</div>
+<div class="lesson-meta">
+<div class="meta-card"><strong>Área</strong><br>Relações Internacionais</div>
+<div class="meta-card"><strong>Duração</strong><br>100 minutos</div>
+<div class="meta-card"><strong>Arquivo</strong><br>Base_Dados_Aula4_Excel.xlsx</div>
+</div>
+</section>
+<main class="wrap" id="conteudo">
+<h2>Como usar esta apostila</h2>
+<p>Siga os passos na ordem e use os quadros “Confira o resultado” para validar cada etapa. Ao final, revise o resumo e pratique com os exercícios.</p>
+<div class="step"><h2>Passo 1 — Reconhecer o problema</h2><p>Abra a aba <strong>Eventos</strong>. O Código, como <code>BRA-2026-045</code>, reúne país, ano e número. O Responsável vem no formato <strong>Sobrenome, Nome</strong>.</p></div>
+<div class="step"><h2>Passo 2 — Extrair o país</h2><p>Em D5 digite <code>=ESQUERDA(A5;3)</code> e arraste até D12.</p><div class="callout"><strong>Confira:</strong> D5 deve mostrar <strong>BRA</strong>.</div></div>
+<div class="step"><h2>Passo 3 — Extrair o nº de registro</h2><p>Em E5 digite <code>=DIREITA(A5;3)</code> e arraste até E12.</p><div class="callout"><strong>Confira:</strong> E5 deve mostrar <strong>045</strong>.</div></div>
+<div class="step"><h2>Passo 4 — Localizar a vírgula</h2><p>Em F5 digite <code>=PROCURAR(",";C5)</code> e arraste até F12.</p><div class="callout"><strong>Confira:</strong> para “Silva, Ana”, F5 deve mostrar <strong>6</strong>.</div></div>
+<div class="step"><h2>Passo 5 — Separar o sobrenome</h2><p>Em G5 digite <code>=ESQUERDA(C5;F5-1)</code> e arraste até G12.</p><div class="callout"><strong>Confira:</strong> G5 deve mostrar <strong>Silva</strong>.</div></div>
+<div class="step"><h2>Passo 6 — Montar o ID padronizado</h2><p>Em H5 digite <code>=CONCAT(D5;"-";E5)</code> e arraste até H12.</p><div class="callout"><strong>Confira:</strong> H5 deve mostrar <strong>BRA-045</strong>.</div></div>
+<h2>Fique atento</h2><p>Conte os caracteres com cuidado. Ao usar a posição da vírgula, não esqueça o <code>-1</code>. CONCAT, CONCATENAR e <code>&amp;</code> podem ser usados para juntar textos.</p>
+<h2>Resumo rápido</h2><p><code>=ESQUERDA(texto; nº)</code> → caracteres do início<br><code>=DIREITA(texto; nº)</code> → caracteres do fim<br><code>=PROCURAR("x"; texto)</code> → posição de “x”<br><code>=CONCAT(a; b; ...)</code> → junta textos.</p>
+<h2>Para estudar em casa</h2><p>☐ Recriar as cinco colunas do zero.<br>☐ Ordenar por país e filtrar por ano.<br>☐ Conferir os resultados com a apostila.</p>
+<div class="callout"><strong>Desafio:</strong> extraia o ANO do código usando PROCURAR e EXT.TEXTO.</div>
+</main>
+<footer>Excel na Prática • Prof. Flavio Azevedo</footer>
+</body></html>

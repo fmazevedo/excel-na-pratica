@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 5 — PROCV, SEERRO, CONT.SE e SOMASE para uma pauta investigativa | Excel na Prática</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="nav">
+<a class="brand" href="index.html">Excel na <span>Prática</span></a>
+<nav><a href="index.html">Início</a><a href="#conteudo">Conteúdo</a><a href="#materiais">Materiais</a></nav>
+</div></header>
+<section class="wrap" style="padding-bottom:10px">
+<div class="kicker">Encontro 5 — Cruzando bases e produzindo indicadores</div>
+<h1>PROCV, SEERRO, CONT.SE e SOMASE para uma pauta investigativa</h1>
+<p class="lead">Cruze duas tabelas por uma chave e produza indicadores para uma investigação.</p>
+<section class="video-box" id="video">
+<h2>Vídeo da aula</h2>
+<div class="video-placeholder">Substitua <code style="color:#fff;background:rgba(255,255,255,.16)">VIDEO_ID_AULA5</code> pelo ID do vídeo do YouTube.</div>
+<!-- <iframe width="100%" style="aspect-ratio:16/9;border:0;border-radius:12px" src="https://www.youtube.com/embed/VIDEO_ID_AULA5" title="Vídeo Aula 5" allowfullscreen></iframe> -->
+</section>
+<div class="btns" id="materiais">
+<a class="btn primary" href="pdf/roteiro-aula5.pdf" target="_blank">Abrir roteiro da aula (PDF)</a>
+<a class="btn secondary" href="Base_Dados_Aula5_Excel_ESPM.xlsx">Baixar base de dados</a>
+</div>
+<div class="lesson-meta">
+<div class="meta-card"><strong>Área</strong><br>Jornalismo</div>
+<div class="meta-card"><strong>Duração</strong><br>100 minutos</div>
+<div class="meta-card"><strong>Arquivo</strong><br>Base_Dados_Aula5_Excel_ESPM.xlsx</div>
+</div>
+</section>
+<main class="wrap" id="conteudo">
+<h2>Como usar esta apostila</h2>
+<p>Siga os passos na ordem e use os quadros “Confira o resultado” para validar cada etapa. Ao final, revise o resumo e pratique com os exercícios.</p>
+<div class="step"><h2>Passo 1 — Entender as tabelas e a chave</h2><p>Na aba <strong>Municípios</strong>, a tabela principal está em A–E e a de indicadores em G–I. A chave comum é o <strong>Código</strong>.</p></div>
+<div class="step"><h2>Passo 2 — Trazer o índice com PROCV</h2><p>Em E5 digite <code>=PROCV(A5;$G$5:$I$14;2;FALSO)</code> e arraste até E14.</p><div class="callout"><strong>Confira:</strong> E5 deve mostrar <strong>42</strong>.</div></div>
+<div class="step"><h2>Passo 3 — Proteger contra erros com SEERRO</h2><p>Em B24 digite <code>=SEERRO(PROCV(B23;$G$5:$I$14;2;FALSO);"Não localizado")</code>.</p><div class="callout"><strong>Confira:</strong> para um código inexistente, aparece <strong>Não localizado</strong>.</div></div>
+<div class="step"><h2>Passo 4 — Contar por critério</h2><p>Use <code>=CONT.SE(E5:E14;"&lt;50")</code>.</p><div class="callout"><strong>Confira:</strong> resultado = <strong>6 municípios</strong>.</div></div>
+<div class="step"><h2>Passo 5 — Somar por critério</h2><p>Use <code>=SOMASE(E5:E14;"&lt;50";D5:D14)</code>.</p><div class="callout"><strong>Confira:</strong> resultado = <strong>590.000 habitantes</strong>.</div></div>
+<h2>Fique atento</h2><p>Trave o intervalo com <code>$</code>, use <code>FALSO</code> para correspondência exata e mantenha a chave padronizada.</p>
+<h2>Resumo rápido</h2><p><code>=PROCV(chave; tabela; coluna; FALSO)</code><br><code>=SEERRO(fórmula; "alternativa")</code><br><code>=CONT.SE(intervalo; "critério")</code><br><code>=SOMASE(intervalo; "critério"; soma)</code></p>
+<h2>Para estudar em casa</h2><p>☐ Refazer PROCV, SEERRO, CONT.SE e SOMASE.<br>☐ Trazer Gasto/hab com PROCV.<br>☐ Descobrir quantidade de municípios e população no Nordeste.</p>
+<div class="callout"><strong>Desafio:</strong> descubra a população das regiões com gasto por habitante acima da média e escreva a pauta sugerida pelos dados.</div>
+</main>
+<footer>Excel na Prática • Prof. Flavio Azevedo</footer>
+</body></html>
